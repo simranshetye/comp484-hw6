@@ -1,0 +1,241 @@
+/* ================================
+   Simran Shetye Resume Site Styles
+   Enhanced for Aesthetic Polish
+   ================================ */
+
+/* === Color Palette ===
+   Background: #121212
+   Header/Footer: #1a1a1a
+   Text: #f5f5f5
+   Accent: #ff3c38
+   Gradient: linear-gradient(135deg, #1a1a1a, #2c2c2c)
+*/
+
+:root {
+  --bg-color: #121212;
+  --header-footer-bg: #1a1a1a;
+  --text-color: #f5f5f5;
+  --accent-color: #ff3c38;
+  --font-main: 'Inter', sans-serif;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* === Reset & Base === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.7;
+  padding: 0 1rem;
+  opacity: 0;
+  transition: opacity 0.8s ease-in;
+}
+
+body.fade-in {
+  opacity: 1;
+}
+
+/* === Header === */
+header {
+  background: var(--header-footer-bg);
+  text-align: center;
+  padding: 4rem 1rem 2rem;
+  box-shadow: var(--shadow);
+}
+
+header img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid var(--accent-color);
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+header h2 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+header p {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* === Navigation === */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--header-footer-bg);
+  box-shadow: var(--shadow);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+nav a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+nav a:hover {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  box-shadow: 0 0 8px var(--accent-color);
+}
+
+/* === Main Content === */
+main {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+section {
+  margin-bottom: 3rem;
+  padding: 1rem;
+  background: #1e1e1e;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--accent-color);
+}
+
+h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+/* === Footer === */
+footer {
+  background: var(--header-footer-bg);
+  text-align: center;
+  padding: 3rem 1rem;
+  margin-top: 2rem;
+  box-shadow: var(--shadow);
+}
+
+footer h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+footer div a {
+  color: var(--accent-color);
+  margin: 0 0.5rem;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+footer div a:hover {
+  color: #ffffff;
+}
+
+footer p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.4rem;
+  }
+
+  header h2 {
+    font-size: 1.3rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  section {
+    padding: 0.8rem;
+  }
+}
+
+/* === Project Entries === */
+article {
+  background-color: #ffffff;
+  border: 2px solid var(--highlight-color);
+  border-radius: 8px;
+  padding: 1.2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: var(--text-color); /* Ensures readable text on white background */
+}
+
+article h3 {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  color: var(--accent-color); /* Deep green for headings */
+  margin-bottom: 0.5rem;
+}
+
+article p {
+      font-size: 1rem;
+      color: #000000; /* Black text for better contrast */
+      margin: 0.5rem 0;
+    }
+
+}
+
+article a {
+  color: var(--highlight-color);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+article a:hover {
+  color: var(--accent-color);
+}
